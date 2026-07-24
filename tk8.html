@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TK8: Chuyển đổi màu Hex sang RGB</title>
+<link rel="stylesheet" href="css/common.css">
+<style>
+.input-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input-row input {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #d5d7e5;
+  font-size: 14px;
+}
+
+.preview-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #f0f1fb;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.swatch {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  border: 1px solid #d5d7e5;
+  flex-shrink: 0;
+}
+
+.rgb-output {
+  font-size: 18px;
+  font-weight: 700;
+  color: #2d2f6b;
+}
+
+.error-text {
+  color: #c62828;
+  font-size: 13px;
+  margin-top: -12px;
+  margin-bottom: 16px;
+}
+</style>
+</head>
+<body>
+<header class="page-header">
+  <span class="page-title">TK8: Chuyển đổi màu Hex sang RGB</span>
+  <a href="index.html">← Về trang chủ</a>
+</header>
+<div class="container">
+  <p class="desc">Viết hàm nhận mã màu Hex (ví dụ: #FF0000) và trả về giá trị RGB tương ứng (rgb(255, 0, 0)).</p>
+  <div class="input-row">
+    <input type="text" id="hexInput" placeholder="#FF0000" value="#FF0000">
+    <button class="btn" id="convertBtn">Chuyển đổi</button>
+  </div>
+  <p class="error-text" id="errorText" hidden>Mã Hex không hợp lệ, ví dụ đúng: #FF0000</p>
+  <div class="preview-row">
+    <div class="swatch" id="swatch"></div>
+    <div class="rgb-output" id="rgbOutput">rgb(255, 0, 0)</div>
+  </div>
+</div>
+
+<script src="js/tk8.js"></script>
+</body>
+</html>

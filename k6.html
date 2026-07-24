@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>K6: Xử lý sự kiện bàn phím</title>
+<link rel="stylesheet" href="css/common.css">
+<style>
+.play-area {
+  position: relative;
+  height: 320px;
+  background: #f0f1fb;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.mover {
+  position: absolute;
+  left: 50%;
+  top: 140px;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 60px;
+  background: #4b4fd6;
+  border-radius: 12px;
+}
+
+.hint {
+  color: #5a5f7a;
+  font-size: 13px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+<header class="page-header">
+  <span class="page-title">K6: Xử lý sự kiện bàn phím</span>
+  <a href="index.html">← Về trang chủ</a>
+</header>
+<div class="container">
+  <p class="desc">Viết một hàm JS lắng nghe sự kiện keydown. Khi người dùng bấm phím mũi tên LÊN, dịch chuyển một khối &lt;div&gt; lên trên; phím MŨI TÊN XUỐNG, dịch chuyển khối xuống dưới.</p>
+  <div class="play-area">
+    <div class="mover" id="mover"></div>
+  </div>
+  <p class="hint">Bấm ↑ hoặc ↓ trên bàn phím để di chuyển khối vuông (click vào khung trước để lấy focus).</p>
+</div>
+
+<script src="js/k6.js"></script>
+</body>
+</html>

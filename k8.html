@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>K8: Tính chỉ số BMI và Phân loại</title>
+<link rel="stylesheet" href="css/common.css">
+<style>
+.form-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.field {
+  flex: 1;
+}
+
+.field label {
+  display: block;
+  font-size: 13px;
+  color: #5a5f7a;
+  margin-bottom: 6px;
+}
+
+.field input {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #d5d7e5;
+  font-size: 14px;
+}
+
+.result-card {
+  background: #f0f1fb;
+  border-radius: 10px;
+  padding: 22px;
+  text-align: center;
+}
+
+.bmi-value {
+  font-size: 32px;
+  font-weight: 800;
+  color: #2d2f6b;
+  margin-bottom: 6px;
+}
+
+.bmi-label {
+  font-size: 15px;
+  font-weight: 700;
+  padding: 4px 14px;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.label-thieucan { background: #fff3cd; color: #856404; }
+.label-binhthuong { background: #d4edda; color: #155724; }
+.label-thuacan { background: #f8d7da; color: #721c24; }
+</style>
+</head>
+<body>
+<header class="page-header">
+  <span class="page-title">K8: Tính chỉ số BMI và Phân loại</span>
+  <a href="index.html">← Về trang chủ</a>
+</header>
+<div class="container">
+  <p class="desc">Tạo input cân nặng (kg) và chiều cao (m). Viết hàm tính BMI và hiển thị phân loại (Thiếu cân, Bình thường, Thừa cân).</p>
+  <div class="form-row">
+    <div class="field">
+      <label for="weightInput">Cân nặng (kg)</label>
+      <input type="number" id="weightInput" value="60" min="1" step="0.1">
+    </div>
+    <div class="field">
+      <label for="heightInput">Chiều cao (m)</label>
+      <input type="number" id="heightInput" value="1.7" min="0.1" step="0.01">
+    </div>
+  </div>
+  <button class="btn" id="calcBtn" style="margin-bottom: 20px;">Tính BMI</button>
+  <div class="result-card">
+    <div class="bmi-value" id="bmiValue">--</div>
+    <span class="bmi-label" id="bmiLabel">--</span>
+  </div>
+</div>
+
+<script src="js/k8.js"></script>
+</body>
+</html>

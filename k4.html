@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>K4: Phân trang danh sách</title>
+<link rel="stylesheet" href="css/common.css">
+<style>
+.item-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+}
+
+.item-list li {
+  padding: 12px 16px;
+  border: 1px solid #e2e3ee;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #33364d;
+}
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.page-btn {
+  background: #fff;
+  border: 1px solid #d5d7e5;
+  color: #2d2f6b;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.page-btn.active {
+  background: #4b4fd6;
+  color: #fff;
+  border-color: #4b4fd6;
+}
+
+.page-btn:hover {
+  border-color: #4b4fd6;
+}
+</style>
+</head>
+<body>
+<header class="page-header">
+  <span class="page-title">K4: Phân trang danh sách</span>
+  <a href="index.html">← Về trang chủ</a>
+</header>
+<div class="container">
+  <p class="desc">Hiển thị danh sách 50 mục. Chỉ hiển thị 10 mục mỗi trang và tạo các nút phân trang (1, 2, 3...). Khi bấm vào nút, cập nhật danh sách hiển thị tương ứng.</p>
+  <ul class="item-list" id="itemList"></ul>
+  <div class="pagination" id="pagination"></div>
+</div>
+
+<script src="js/k4.js"></script>
+</body>
+</html>

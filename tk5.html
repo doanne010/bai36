@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TK5: Accordion đơn giản</title>
+<link rel="stylesheet" href="css/common.css">
+<style>
+.accordion-item {
+  border: 1px solid #e2e3ee;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.accordion-header {
+  width: 100%;
+  text-align: left;
+  background: #f0f1fb;
+  border: none;
+  padding: 16px 18px;
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-header::after {
+  content: "+";
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.accordion-header.active::after {
+  transform: rotate(45deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+  background: #fff;
+}
+
+.accordion-content p {
+  padding: 16px 18px;
+  margin: 0;
+  color: #5a5f7a;
+  font-size: 14px;
+  line-height: 1.6;
+}
+</style>
+</head>
+<body>
+<header class="page-header">
+  <span class="page-title">TK5: Accordion đơn giản</span>
+  <a href="index.html">← Về trang chủ</a>
+</header>
+<div class="container">
+  <p class="desc">Tạo một phần tử accordion (tiêu đề và nội dung ẩn). Khi bấm vào tiêu đề, nội dung sẽ trượt xuống/lên (sử dụng classList.toggle() và max-height/transition trong CSS).</p>
+
+  <div class="accordion-item">
+    <button class="accordion-header">HTML là gì?</button>
+    <div class="accordion-content">
+      <p>HTML là ngôn ngữ đánh dấu siêu văn bản dùng để xây dựng cấu trúc cho trang web, gồm các thẻ như div, p, h1, img...</p>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <button class="accordion-header">CSS dùng để làm gì?</button>
+    <div class="accordion-content">
+      <p>CSS dùng để định dạng giao diện của trang web như màu sắc, bố cục, font chữ, hiệu ứng chuyển động...</p>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <button class="accordion-header">JavaScript dùng để làm gì?</button>
+    <div class="accordion-content">
+      <p>JavaScript giúp trang web trở nên tương tác, xử lý sự kiện người dùng, thay đổi nội dung động mà không cần tải lại trang.</p>
+    </div>
+  </div>
+</div>
+
+<script src="js/tk5.js"></script>
+</body>
+</html>
