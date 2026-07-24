@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dương Ngọc Đoàn - Bài tập 36</title>
+<link rel="stylesheet" href="css/common.css">
+<style>
+.hero {
+  background: linear-gradient(135deg, #2d2f6b, #4b4fd6);
+  color: #fff;
+  padding: 60px 28px;
+  text-align: center;
+}
+
+.hero h1 {
+  margin: 0 0 8px;
+  font-size: 32px;
+}
+
+.hero p {
+  margin: 4px 0;
+  font-size: 15px;
+  color: #dcdcf7;
+}
+
+.info-card {
+  max-width: 720px;
+  margin: -40px auto 0;
+  background: #fff;
+  border-radius: 16px;
+  padding: 26px 32px;
+  box-shadow: 0 12px 30px rgba(30,30,60,0.1);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  position: relative;
+}
+
+.info-item span {
+  display: block;
+}
+
+.info-label {
+  font-size: 12px;
+  color: #8a8ea8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.info-value {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1f2333;
+}
+
+.menu-section {
+  max-width: 720px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.menu-section h2 {
+  font-size: 18px;
+  color: #2d2f6b;
+  margin-bottom: 16px;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.menu-card {
+  display: block;
+  background: #fff;
+  border: 1px solid #e2e3ee;
+  border-radius: 12px;
+  padding: 18px;
+  text-decoration: none;
+  color: #1f2333;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(30,30,60,0.1);
+  border-color: #4b4fd6;
+}
+
+.menu-card .tag {
+  font-size: 11px;
+  font-weight: 700;
+  color: #4b4fd6;
+  letter-spacing: 0.5px;
+}
+
+.menu-card .name {
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 6px;
+}
+
+@media (max-width: 560px) {
+  .info-card {
+    grid-template-columns: 1fr;
+  }
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+<body>
+<div class="hero">
+  <h1>Trang chủ bài tập 36</h1>
+  <p>Dương Ngọc Đoàn— Công nghệ thông tin</p>
+</div>
+
+<div class="info-card">
+  <div class="info-item">
+    <span class="info-label">Họ tên</span>
+    <span class="info-value">Dương Ngọc Đoàn&nbsp;</span>
+  </div>
+  <div class="info-item">
+    <span class="info-label">MSSV</span>
+    <span class="info-value">221A010219</span>
+  </div>
+  <div class="info-item">
+    <span class="info-label">Lớp</span>
+    <span class="info-value">701</span>
+  </div>
+  <div class="info-item">
+    <span class="info-label">Ngành</span>
+    <span class="info-value">Công nghệ thông tin</span>
+  </div>
+</div>
+
+<div class="menu-section">
+  <h2>Danh sách bài tập</h2>
+  <div class="menu-grid">
+    <a class="menu-card" href="tk5.html">
+      <div class="tag">TK5</div>
+      <div class="name">Accordion đơn giản</div>
+    </a>
+    <a class="menu-card" href="tk7.html">
+      <div class="tag">TK7</div>
+      <div class="name">Tạo chuỗi ngẫu nhiên</div>
+    </a>
+    <a class="menu-card" href="tk8.html">
+      <div class="tag">TK8</div>
+      <div class="name">Chuyển đổi Hex sang RGB</div>
+    </a>
+    <a class="menu-card" href="k4.html">
+      <div class="tag">K4</div>
+      <div class="name">Phân trang danh sách</div>
+    </a>
+    <a class="menu-card" href="k6.html">
+      <div class="tag">K6</div>
+      <div class="name">Xử lý sự kiện bàn phím</div>
+    </a>
+    <a class="menu-card" href="k8.html">
+      <div class="tag">K8</div>
+      <div class="name">Tính chỉ số BMI</div>
+    </a>
+  </div>
+</div>
+
+</body>
+</html>
